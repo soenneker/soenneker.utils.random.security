@@ -11,4 +11,8 @@ public class RandomSecurityUtilTests : FixturedUnitTest
     {
 
     }
+
+    [Fact]
+    public void Default()
+    { }
 }
