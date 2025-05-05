@@ -1,4 +1,4 @@
-# Contributing to Soenneker.Utils.Random.Security
+﻿# Contributing to Soenneker.Utils.Random.Security
 
 We're excited that you're interested in contributing!
 
