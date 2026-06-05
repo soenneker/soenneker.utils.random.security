@@ -5,6 +5,9 @@ using System.Security.Cryptography;
 
 namespace Soenneker.Utils.Random.Security;
 
+/// <summary>
+/// Represents the random security util.
+/// </summary>
 public static class RandomSecurityUtil
 {
     // 10^28 fits in 96 bits (decimal uses 96-bit integer + scale).
