@@ -47,6 +47,7 @@ public static class RandomSecurityUtil
     /// </summary>
     /// <param name="minValue">Inclusive lower bound.</param>
     /// <param name="maxValue">Exclusive upper bound (must be greater than <paramref name="minValue"/>).</param>
+    /// <returns>Generates a cryptographically secure random integer in the specified range [minValue, maxValue).</returns>
     [Pure, MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int Next(int minValue, int maxValue)
     {
@@ -59,6 +60,7 @@ public static class RandomSecurityUtil
     /// </summary>
     /// <param name="minValue">Inclusive lower bound.</param>
     /// <param name="maxValue">Exclusive upper bound (must be greater than <paramref name="minValue"/>).</param>
+    /// <returns>Generates a cryptographically secure random decimal in the specified range [minValue, maxValue).</returns>
     [Pure]
     public static decimal NextDecimal(decimal minValue, decimal maxValue)
     {
@@ -76,6 +78,7 @@ public static class RandomSecurityUtil
     /// Produces a decimal with 28 digits of scale using unbiased rejection sampling over [0, 10^28).
     /// Allocation-free and avoids floating point.
     /// </remarks>
+    /// <returns>Generates a cryptographically secure random fraction in the range [0, 1).</returns>
     [Pure]
     public static decimal GetRandomFraction()
     {
@@ -104,6 +107,7 @@ public static class RandomSecurityUtil
     /// <remarks>
     /// Uses 53 random bits (the precision of IEEE 754 double mantissa) for a uniform distribution over k/2^53.
     /// </remarks>
+    /// <returns>Generates a cryptographically secure random double in the range [0.0, 1.0).</returns>
     [Pure, MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static double NextDouble()
     {
