@@ -67,8 +67,16 @@ public static class RandomSecurityUtil
         if (minValue >= maxValue)
             throw new ArgumentOutOfRangeException(nameof(minValue), "minValue must be less than maxValue.");
 
-        // [0,1) * range + min
-        return minValue + (GetRandomFraction() * (maxValue - minValue));
+        decimal range = maxValue - minValue;
+
+        while (true)
+        {
+            decimal result = minValue + GetRandomFraction() * range;
+
+            // Decimal multiplication can round a value up to the exclusive endpoint.
+            if (result < maxValue)
+                return result;
+        }
     }
 
     /// <summary>
